@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+body {
+    margin-bottom: 60px;
+    background-image: url('/Images/fondo.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Establece la altura del fondo, ajusta según sea necesario */
+    margin-top: 0;
+}
+
+header img {
+    width: 50px
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    opacity: 0.7;
+    transition: transform 0.5s ease;
+}
+
+.nav-item img {
+    width: 50px;
+    transition: transform 0.1s ease;
+
+}
+
+.nav-item img:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1.2);
+}
+

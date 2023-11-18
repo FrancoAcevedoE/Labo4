@@ -1,0 +1,49 @@
+﻿@model PROGRAM.Models.OrdenDeTrabajo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OrdenDeTrabajo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TipoOT" class="control-label"></label>
+                <input asp-for="TipoOT" class="form-control" />
+                <span asp-validation-for="TipoOT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManoDeObraRefId" class="control-label"></label>
+                <select asp-for="ManoDeObraRefId" class ="form-control" asp-items="ViewBag.ManoDeObraRefId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EquipoRefId" class="control-label"></label>
+                <select asp-for="EquipoRefId" class ="form-control" asp-items="ViewBag.EquipoRefId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcedimientoRefId" class="control-label"></label>
+                <select asp-for="ProcedimientoRefId" class ="form-control" asp-items="ViewBag.ProcedimientoRefId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaterialesRefId" class="control-label"></label>
+                <select asp-for="MaterialesRefId" class ="form-control" asp-items="ViewBag.MaterialesRefId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
